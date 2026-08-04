@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CinePulse — Films & Séries</title>
+  <meta name="description" content="CinePulse — Suivi des films au cinéma, prochaines sorties, séries du monde, calendrier hebdomadaire." />
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="CinePulse accueil">
+      <img src="assets/logo.svg" alt="" class="brand__logo" width="40" height="40" />
+      <span class="brand__name">Cine<span class="brand__accent">Pulse</span></span>
+    </a>
+    <nav class="site-nav" aria-label="Navigation principale">
+      <a href="index.html" class="nav-link nav-link--active">Accueil</a>
+      <a href="films.html" class="nav-link">Films</a>
+      <a href="series.html" class="nav-link">Séries</a>
+    </nav>
+  </header>
+
+  <main class="site-main">
+    <section class="hero">
+      <div class="hero__inner">
+        <h1 class="hero__title">Le cinéma et les séries,<br/>au rythme du monde.</h1>
+        <p class="hero__subtitle">CinePulse suit pour vous les sorties au cinéma, les prochains grands films et le calendrier hebdomadaire des séries — partout sur la planète.</p>
+        <div class="hero__cta">
+          <a class="btn btn--primary" href="films.html">Explorer les films</a>
+          <a class="btn btn--ghost" href="series.html">Voir les séries</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <header class="section__header">
+        <h2 class="section__title">Tendances du moment</h2>
+        <p class="section__sub">Films et séries qui font parler aujourd'hui.</p>
+      </header>
+      <div id="home-trending" class="card-grid" data-section="trending">
+        <div class="loading-msg"><span class="loading-spinner" aria-hidden="true"></span> Chargement des tendances…</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <header class="section__header">
+        <h2 class="section__title">Au cinéma cette semaine</h2>
+        <p class="section__sub">Les films actuellement en salles.</p>
+        <a class="section__more" href="films.html#now-playing">Tout voir →</a>
+      </header>
+      <div id="home-now-playing" class="card-grid" data-section="now-playing">
+        <div class="loading-msg"><span class="loading-spinner" aria-hidden="true"></span> Chargement…</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <header class="section__header">
+        <h2 class="section__title">Séries du jour</h2>
+        <p class="section__sub">Épisodes diffusés aujourd'hui et dans les jours à venir.</p>
+        <a class="section__more" href="series.html#calendar">Calendrier complet →</a>
+      </header>
+      <div id="home-today" class="card-grid" data-section="today-tv">
+        <div class="loading-msg"><span class="loading-spinner" aria-hidden="true"></span> Chargement…</div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> CinePulse · Données via <a href="https://www.themoviedb.org/" target="_blank" rel="noopener">TMDB</a>. Ce produit n'est pas approuvé ou certifié par TMDB.</p>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
